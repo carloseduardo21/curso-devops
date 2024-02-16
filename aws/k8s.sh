@@ -1,0 +1,3 @@
+#!/bin/bash
+curl https://releases.rancher.com/install-docker/24.0.sh | sh
+docker run -d --privileged --restart=unless-stopped --net=host -v /etc/kubernetes:/etc/kubernetes -v /var/run:/var/run  rancher/rancher-agent:v2.6.14 --server https://18.227.134.117 --token kxj4nvcj7tlt28vwwbsmcnn2cn7d25zv4zp4rvwhjz98g5l66wcklk --ca-checksum d3e46aad01ace26322ef28cbfde5583fea50dabcb579a92aacda087a6c94e79f --etcd --controlplane --worker
